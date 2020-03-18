@@ -1,5 +1,5 @@
 var currentQuestionIndex = 0;
-var time = questions.length * 15;
+var time = 1000;
 
 var questions = [
     {
@@ -29,6 +29,7 @@ var questions = [
     }
 ]
 
+
 // create an array of objects with the question, array of multiple choice answers, and a correct answer
 
 // use the index of the questions array to pull the first question 
@@ -40,14 +41,21 @@ var questions = [
 // questions[4].question = 'Which indicates data manipulation in javaScript?'
 //use getElementbyId to target card
 
-var questionCard = document.getElementById('question-card');
+
 var start = document.getElementById('start');
-var questionTitle = document.getElementById('questionTitle');
+var questionTitle = document.getElementById('question-title');
 var choices = document.getElementById('choices');
-var startScreen = document.getElementById('startScreen');
+
 
 function displayQuestion() {
-    var currentQuestion = questions[currentQuestionIndex]
+    var currentQuestion = questions[currentQuestionIndex];
+
+    var startScreen = document.getElementById('start-screen');
+    startScreen.setAttribute("class", "hide");
+
+
+    var questionCard = document.getElementById('questions');
+    questionCard.removeAttribute("class");
 }
 
 function startQuiz() {
