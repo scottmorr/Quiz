@@ -1,0 +1,7 @@
+.hide {
+    display:none;
+}
+
+#start-screen {
+    border: 1px rgba(0,0,0, 0.3);
+}
