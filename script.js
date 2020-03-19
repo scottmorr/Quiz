@@ -43,8 +43,7 @@ var questions = [
 
 
 var start = document.getElementById('start');
-var questionTitle = document.getElementById('question-title');
-var choices = document.getElementById('choices');
+var choicesEl = document.getElementById('choices');
 
 
 function displayQuestion() {
@@ -61,10 +60,42 @@ function displayQuestion() {
 }
 function getQuestion() {
     var currentQuestion = questions[currentQuestionIndex];
-
     console.log(currentQuestion);
+
+    var questionTitle = document.getElementById('question-title');
+    questionTitle.textContent = currentQuestion.question;
+
+    choicesEl.innerHTML = "";
+
+    currentQuestion.choices.forEach((choice, i) => {
+        var choiceNode = document.createElement("button");
+
+        choiceNode.setAttribute("class", "choice");
+        choiceNode.setAttribute("value", choice);
+        choiceNode.textContent = i + 1 + "." + choice;
+
+         choices.onClick =  questionClick;
+
+        choicesEl.appendChild(choiceNode);
+
+    })
 }
 
+function questionClick () {
+
+        if(this.value !== questions[currentQuestionIndex].correctAnswer) {
+            time -= 15;
+            if(time < 0) {
+                time = 0;
+            }
+
+            timeEl.textContent = time;
+
+            feedbackEl.textContent = "Wrong!"
+        } else {
+            
+        }
+}
 
 function startQuiz() {
     displayQuestion()  
