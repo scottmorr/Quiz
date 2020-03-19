@@ -48,7 +48,7 @@ var choices = document.getElementById('choices');
 
 
 function displayQuestion() {
-    var currentQuestion = questions[currentQuestionIndex];
+    
 
     var startScreen = document.getElementById('start-screen');
     startScreen.setAttribute("class", "hide");
@@ -56,7 +56,15 @@ function displayQuestion() {
 
     var questionCard = document.getElementById('questions');
     questionCard.removeAttribute("class");
+
+    getQuestion();
 }
+function getQuestion() {
+    var currentQuestion = questions[currentQuestionIndex];
+
+    console.log(currentQuestion);
+}
+
 
 function startQuiz() {
     displayQuestion()  
