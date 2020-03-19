@@ -20,6 +20,23 @@ h1 {
     font-size: 55px;
 }
 
+h5 {
+
+    text-align: center;
+    color: blue;
+    padding:35px;
+
+}
+
+
+h6 {
+    text-align: center;
+    color: blue;
+    
+    
+}
+
+
 
 
 p {
@@ -31,8 +48,8 @@ p {
 .container {
     display:flex;
     text-align:  center;
-    margin-left:100px;
-    margin-right:100px;
+    margin-left:200px;
+    margin-right:200px;
     justify-content: center;
 }
 

@@ -97,8 +97,62 @@ function questionClick () {
         }
 }
 
-function startQuiz() {
+
+//var timer = document.getElementById('timer')
+
+
+
+
+
+
+function formatTimeLeft(time) {
+    // The largest round integer less than or equal to the result of time divided being by 60.
+    const minutes = Math.floor(time / 60);
+    
+    // Seconds are the remainder of the time divided by 60 (modulus operator)
+    let seconds = time % 60;
+    
+    // If the value of seconds is less than 10, then display seconds with a leading zero
+    if (seconds < 10) {
+      seconds = `0${seconds}`;
+    }
+  
+    // The output in MM:SS format
+    return `${minutes}:${seconds}`;
+  }
+
+
+function timerStart () {
+   const TIME_LIMIT=15;
+    var timePassed = 0;
+    var timeLeft = TIME_LIMIT;
+        document.getElementById('timer').textContent="00:00";
+        setInterval(() =>{  
+        timePassed=timePassed+1;
+        timeLeft=TIME_LIMIT-timePassed;
+            if(timeLeft < 0) {
+
+            timeLeft =0;
+        }
+        var formattedTimeLeft = formatTimeLeft(timeLeft);
+        document.getElementById('timer').textContent=[formattedTimeLeft];
+        },1000)
+}
+
+
+
+
+  
+
+
+
+
+
+
+
+  function startQuiz() {
     displayQuestion()  
+    timerStart()
 }
 
 
