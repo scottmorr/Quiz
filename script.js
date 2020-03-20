@@ -58,6 +58,26 @@ function displayQuestion() {
 
     getQuestion();
 }
+
+
+function questionClick () {
+
+    console.log(currentQuestionIndex);
+    currentQuestionIndex++;
+    getQuestion()
+
+
+if(this.value !== questions[currentQuestionIndex].correctAnswer) {
+   alert("You are so right!");
+} 
+else {
+    alert("Sorry. You better learn jour JavaScript.");
+}
+}
+
+
+
+
 function getQuestion() {
     var currentQuestion = questions[currentQuestionIndex];
     console.log(currentQuestion);
@@ -74,28 +94,13 @@ function getQuestion() {
         choiceNode.setAttribute("value", choice);
         choiceNode.textContent = i + 1 + "." + choice;
 
-         choices.onClick =  questionClick;
+         choiceNode.onclick =  questionClick;
 
         choicesEl.appendChild(choiceNode);
 
     })
 }
 
-function questionClick () {
-
-        if(this.value !== questions[currentQuestionIndex].correctAnswer) {
-            time -= 15;
-            if(time < 0) {
-                time = 0;
-            }
-
-            timeEl.textContent = time;
-
-            feedbackEl.textContent = "Wrong!"
-        } else {
-            
-        }
-}
 
 
 //var timer = document.getElementById('timer')
@@ -138,18 +143,10 @@ function timerStart () {
         document.getElementById('timer').textContent=[formattedTimeLeft];
         },1000)
 }
-
-
-
-
-  
-
-
-
-
-
-
-
+    // grab ID choices to see if answer is right
+    //grab ID correctTab and add a score area
+    //then go to next question
+    
   function startQuiz() {
     displayQuestion()  
     timerStart()
@@ -158,4 +155,4 @@ function timerStart () {
 
 
 
-start.onclick = startQuiz;
+  start.onclick = startQuiz;

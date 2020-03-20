@@ -32,13 +32,21 @@ h5 {
 h6 {
     text-align: center;
     color: blue;
-    
-    
+    }
+
+
+
+
+
+
+#question-title {
+    text-align: center;
+    padding-top: 25px;
 }
 
-
-
-
+#choices {
+    padding-left: 145px;
+}
 p {
     padding: 55px;;
 }
