@@ -77,15 +77,15 @@ function questionClick() {
   console.log(correct);
   console.log(currentQuestionIndex);
 
-  if ([currentQuestionIndex]  ===  []      )     {
+  if ([currentQuestionIndex] > questions.Length) {
     // showEndScreen();
-    getNext();
+    alert("Quiz over");
     // alert("Game Over")
   }
-  
+
   else {
-    // getNext();
-    alert("Quiz Over");
+    getNext();
+  
   }
 }
 
@@ -114,6 +114,7 @@ function getNext() {
 
   })
 }
+
 
 function getQuestion() {
   var currentQuestion = questions[currentQuestionIndex];
