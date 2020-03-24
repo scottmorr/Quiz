@@ -73,11 +73,9 @@ function questionClick() {
   else {
     alert("Wrong");
   }
-  currentQuestionIndex++;
-  console.log(correct);
-  console.log(currentQuestionIndex);
+  
 
-  if ([currentQuestionIndex] > questions.Length) {
+  if ([currentQuestionIndex] >= questions.Length) {
     // showEndScreen();
     alert("Quiz over");
     // alert("Game Over")
@@ -85,12 +83,11 @@ function questionClick() {
 
   else {
     getNext();
-  
   }
 }
 
 function getNext() {
-  var nextQuestion = currentQuestionIndex;
+  var nextQuestion = currentQuestionIndex++;
   console.log(nextQuestion);
   var currentQuestion = questions[currentQuestionIndex];
   console.log(currentQuestion);
