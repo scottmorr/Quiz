@@ -7,7 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./fake.css" />
 
 </head>
 
@@ -40,28 +40,23 @@
         
         
         
-     <div class = "section" id ="endScreen">
-        <div id="correct" class="hide"> 
-    
-         <div>
+     <div  id = "endScreen" class ="answer">
+        <div id="correct" class="showCorrect"> 
+            
+
             <h6 id="correctTab"></h6>
-            <h6 id="firstLabel"></h6>
-             <label for="title">Number correct: </label>
-             <input id="title" name="title" type="text" size="30" required><br>
-         </div>
+        </div>
 
-         <div>
+         <div id="wrong" class="showWrong">
+            <h5></h5>
+
             <h6 id="wrongTab"></h6>
-            <h6 id="secondLabel"></h6>
-             
-               <label for="title">Number incorrect: </label>
-               <input id="title" name="title" type="text" size="30" required><br>
-         </div>
+        </div>
 
          </div>
-     </div>
+    </div>
     
-    <script src="script.js"></script>
+    <script src="fake.js"></script>
 </body>
 
 </html>
