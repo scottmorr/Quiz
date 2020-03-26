@@ -12,17 +12,20 @@
 </head>
 
 <body>
-    
-        <h1 id = "quiz">
-          Quiz
-        </h1>
-    
-   
+
+    <h1 id="quiz">
+        Quiz
+    </h1>
+
+
     <div class="wrapper" id="start-screen">
-        <div class="card" >
-            <p>You're about to test your knowledge of JavaScript.  You have 45 seconds to answer all questions. If you don't know an answer, Google it! Your score will be tallied. Don't get frustrated while taking this quiz.  Take heart, the quiz is hundreds of times easier than writing the code that created the quiz. Do your best and remeber that learning JavaScript is truly a "journey."</p>
+        <div class="card">
+            <p>You're about to test your knowledge of JavaScript. You have 45 seconds to answer all questions. If you
+                don't know an answer, Google it! Your score will be tallied. Don't get frustrated while taking this
+                quiz. Take heart, the quiz is hundreds of times easier than writing the code that created the quiz. Do
+                your best and remeber that learning JavaScript is truly a "journey."</p>
         </div>
-        <div class="container">   
+        <div class="container">
             <button id='start'> start quiz</button>
         </div>
     </div>
@@ -30,38 +33,39 @@
     <div id="questions" class="hide">
         <h2 id="question-title"></h2>
         <div id="choices" class="choices"></div>
-    
+
         <div id="time" class="timer">
-             <h5>Timer</h5>
-                
-             <h6 id="timer"></h6>
-   
+            <h5>Timer</h5>
+
+            <h6 id="timer"></h6>
+
         </div>
-        
-        
-        
-     <div class = "section" id ="endScreen">
-        <div id="correct" class="hide"> 
-    
-         <div>
-            <h6 id="correctTab"></h6>
-            <h6 id="firstLabel"></h6>
-             <label for="title">Number correct: </label>
-             <input id="title" name="title" type="text" size="30" required><br>
-         </div>
+    </div>
 
-         <div>
-            <h6 id="wrongTab"></h6>
-            <h6 id="secondLabel"></h6>
-             
-               <label for="title">Number incorrect: </label>
-               <input id="title" name="title" type="text" size="30" required><br>
-         </div>
 
-         </div>
-     </div>
-    
-    <script src="script.js"></script>
+
+        <div class="hide" id="endScreen">
+            <div id="correct" class="">
+
+                <div>
+                    <h6 id="correctTab"></h6>
+                    <h6 id="firstLabel"></h6>
+                    <label for="title">Number correct: </label>
+                    <input id="title" name="title" type="text" size="30" required><br>
+                </div>
+
+                <div>
+                    <h6 id="wrongTab"></h6>
+                    <h6 id="secondLabel"></h6>
+
+                    <label for="title">Number incorrect: </label>
+                    <input id="title" name="title" type="text" size="30" required><br>
+                </div>
+
+            </div>
+        </div>
+
+        <script src="script.js"></script>
 </body>
 
 </html>

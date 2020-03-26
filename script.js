@@ -1,6 +1,6 @@
 var currentQuestionIndex = 0;
 var time = 1000;
-
+var numCorrect = 0;
 var questions = [
   {
     question: "Where is local storage stored?",
@@ -69,16 +69,18 @@ function questionClick() {
     console.log(this.value);
     alert("Right");
     correct.push(questions[currentQuestionIndex].question);
+    numCorrect++
+
   }
   else {
     alert("Wrong");
   }
   
 
-  if ([currentQuestionIndex] >= questions.Length) {
+  if (currentQuestionIndex+1 === questions.length) {
     // showEndScreen();
     alert("Quiz over");
-    // alert("Game Over")
+    finalScreen();
   }
 
   else {
@@ -87,7 +89,9 @@ function questionClick() {
 }
 
 function getNext() {
-  var nextQuestion = currentQuestionIndex++;
+  var nextQuestion = currentQuestionIndex++
+  
+  ;
   console.log(nextQuestion);
   var currentQuestion = questions[currentQuestionIndex];
   console.log(currentQuestion);
@@ -179,10 +183,11 @@ function finalScreen() {
   var endQuestions = document.getElementById('questions')
   endQuestions.setAttribute("class", "hide");
 
-  var finalpage = document.getElementById('questions');
-  questionCard.removeAttribute("class");
+  var finalpage = document.getElementById('endScreen');
+  finalpage.removeAttribute("class");
 
-  document.getElementById("correctTab").textContent = "Number Correct";
+  
+  document.getElementById("correctTab").textContent = "Number Correct: "+numCorrect;
   document.appendChild("p").addForm = [currentQuestionIndex].correctAnswer;
   document.getElementById("wrongTab").textContent = "Number incorrect";
 
