@@ -30,16 +30,6 @@ var questions = [
 ]
 
 
-// create an array of objects with the question, array of multiple choice answers, and a correct answer
-
-// use the index of the questions array to pull the first question 
-
-// questions[0].question = 'Where is local storage stored?'
-// questions[1].question = 'Javascript is the same as Java.'
-// questions[2].question = 'Which is the accurate JavaScript link?'
-// questions[3].question = 'Where should the javaScript link be placed on your HTML page'
-// questions[4].question = 'Which indicates data manipulation in javaScript?'
-//use getElementbyId to target card
 
 
 var start = document.getElementById('start');
@@ -186,10 +176,19 @@ function finalScreen() {
   var finalpage = document.getElementById('endScreen');
   finalpage.removeAttribute("class");
 
-  
   document.getElementById("correctTab").textContent = "Number Correct: "+numCorrect;
-  document.appendChild("p").addForm = [currentQuestionIndex].correctAnswer;
-  document.getElementById("wrongTab").textContent = "Number incorrect";
+ document.getElementById("firstLabel").textContent = "Good job";
+ // document.appendChild("p").addForm = [currentQuestionIndex].correctAnswer;
+  //document.getElementById("wrongTab").textContent = "Number incorrect";
+ 
+
+//if statement
+if ("correctTab" >= 3) {
+  document.getElementById("firstLabel").textContent = "Good job";
+} else  {
+  document.getElementById("firstLabel").textContent = "Try again";
+}
+
 
 }
 

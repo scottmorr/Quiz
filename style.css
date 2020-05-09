@@ -81,3 +81,15 @@ button {
 button.choice {
     margin-left: 100px;
 }
+#correctTab {
+    color: red;
+    margin-top: 150px;
+text-align: center;
+}
+
+#firstLabel {
+    color: blue;
+    margin-top: 40px;
+text-align: center;
+
+}
