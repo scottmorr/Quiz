@@ -4,28 +4,28 @@ var numCorrect = 0;
 var questions = [
   {
     question: "Where is local storage stored?",
-    choices: ['Your computer console', 'Your i-phone', 'your refigerator'],
-    correctAnswer: 'Your computer console',
+    choices: [' Your computer console', ' Your i-phone', ' your refigerator'],
+    correctAnswer: ' Your computer console',
   },
   {
     question: 'JavaScript is the same as Java.',
-    choices: ['true', 'false'],
-    correctAnswer: 'false',
+    choices: [' true', ' false'],
+    correctAnswer: ' false',
   },
   {
     question: 'Which is the accurate JavaScript link?',
-    choices: ['Javascript.com', '<link rel="stylesheet" href="./style.css" />', '<script src="script.js"></script>'],
-    correctAnswer: '<script src="script.js"></script>',
+    choices: [' Javascript.com', ' <link rel="stylesheet" href="./style.css" />', ' <script src="script.js"></script>'],
+    correctAnswer: ' <script src="script.js"></script>',
   },
   {
     question: 'Where should the Javascript link be placed on your HTML page?',
-    choices: ['The top', 'The middle', 'The bottom'],
-    correctAnswer: 'The bottom',
+    choices: [' The top', ' The middle', ' The bottom'],
+    correctAnswer: ' The bottom',
   },
   {
     question: 'Which indicates data manipulation in JavaScript?',
-    choices: ['A function', 'An image', 'A div'],
-    correctAnswer: 'A function',
+    choices: [' A function', ' An image', ' A div'],
+    correctAnswer: ' A function',
   }
 ]
 
@@ -177,35 +177,28 @@ function finalScreen() {
   finalpage.removeAttribute("class");
 
   document.getElementById("correctTab").textContent = "Number Correct: "+numCorrect;
- document.getElementById("firstLabel").textContent = "Good job";
- // document.appendChild("p").addForm = [currentQuestionIndex].correctAnswer;
-  //document.getElementById("wrongTab").textContent = "Number incorrect";
+// document.getElementById("firstLabel").textContent = "Good job";
+ 
  
 
 //if statement
-if ("correctTab" >= 3) {
-  document.getElementById("firstLabel").textContent = "Good job";
-} else  {
-  document.getElementById("firstLabel").textContent = "Try again";
+if (numCorrect >= 3) {
+ // var greeting = style.color("green");
+  greeting  = "You passed!";
+} else {             
+  greeting = "You failed!";
 }
 
-
-}
-
+ document.getElementById("firstLabel").textContent= greeting;
 
 
+};
 
-
-// grab ID choices to see if answer is right
-//grab ID correctTab and add a score area
-//then go to next question
 
 function startQuiz() {
   displayQuestion();
   timerStart();
 }
 
-
-//document.getElementById(correct).textContent("Correct");
-
 start.onclick = startQuiz;
+
